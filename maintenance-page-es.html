@@ -3,7 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Maintenance Page FR</title>
+    <title>mantenimiento x7</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://d7xz328ytuxde.cloudfront.net/x7c/settings/Favicon%2032x32_e7605588ee.webp"
+    />
     <style>
       .x7-maintenance-page * {
         margin: 0;
@@ -24,6 +30,29 @@
         top: 0;
         left: 0;
         z-index: -1; /* Optional: Ensure it stays in the background */
+      }
+
+      .language-buttons {
+        position: absolute;
+        top: 20px; /* Adjust this value based on your header's height */
+        right: 20px;
+        display: flex;
+        gap: 10px;
+      }
+
+      .language-buttons a {
+        display: inline-block;
+        transition: transform 0.3s ease;
+      }
+
+      .language-buttons a:hover {
+        transform: scale(1.1);
+      }
+
+      .language-buttons img {
+        width: 30px; /* You can adjust the size as needed */
+        height: 30px;
+        border-radius: 50%;
       }
 
       .x7-maintenance-main {
@@ -176,6 +205,24 @@
         }
       }
 
+      @media (max-width: 414px) {
+        .x7-maintenance-main .x7-content {
+          font-size: 0.55rem;
+          padding-top: 0.5rem;
+        }
+      }
+
+      @media (max-width: 390px) {
+        .x7-maintenance-main .x7-content {
+          font-size: 0.5rem;
+          padding-top: 0.5rem;
+        }
+        .x7-maintenance-main .x7-subcontent {
+          padding-top: 0.5rem;
+          font-size: 0.8rem;
+        }
+      }
+
       @media (max-width: 360px) {
         .x7-maintenance-main .x7-logo {
           padding-top: 7vh;
@@ -234,7 +281,7 @@
           background-position: 22% 0%;
         }
         .x7-maintenance-main .x7-logo {
-          padding-top: 11vh;
+          padding-top: 10vh;
         }
         .x7-maintenance-main .x7-content {
           font-size: 0.9rem;
@@ -295,6 +342,33 @@
   </head>
   <body>
     <div class="x7-maintenance-background">
+      <div class="language-buttons">
+        <a href="maintenance-page-en.html"
+          ><img
+            src="https://x1casino.com/wp-content/plugins/gtranslate/flags/svg/en.svg"
+            alt="English"
+        /></a>
+        <a href="maintenance-page-de.html"
+          ><img
+            src="https://x1casino.com/wp-content/plugins/gtranslate/flags/svg/de.svg"
+            alt="German"
+        /></a>
+        <a href="maintenance-page-fr.html"
+          ><img
+            src="https://x1casino.com/wp-content/plugins/gtranslate/flags/svg/fr.svg"
+            alt="French"
+        /></a>
+        <a href="maintenance-page-es.html"
+          ><img
+            src="https://x1casino.com/wp-content/plugins/gtranslate/flags/svg/es.svg"
+            alt="Spanish"
+        /></a>
+        <a href="maintenance-page-it.html"
+          ><img
+            src="https://kgc-igpcms-production.s3.eu-central-1.amazonaws.com/x7c/pages/italy_14e992cc12.svg"
+            alt="Italy"
+        /></a>
+      </div>
       <div class="x7-maintenance-main">
         <div class="x7-maintenance-left"></div>
         <div class="x7-maintenance-right">
@@ -302,21 +376,21 @@
             <img src="./assets/logo.png" alt="X7 Logo" />
           </div>
           <div class="x7-content">
-            <h1>Nous serons bientôt de retour!</h1>
+            <h1>¡Estaremos de vuelta enseguida!</h1>
           </div>
           <div class="x7-subcontent">
             <p>
-              Nous sommes actuellement en maintenance à partir du
-              <b>16 mai à 06h00 UTC pendant environ 8 heures</b> pour améliorer
-              les fonctionnalités de jeu et la sécurité. Merci pour votre
-              patience. Nous sommes impatients de vous offrir une expérience
-              améliorée au X7 Casino !
+              Actualmente estamos en mantenimiento a partir del
+              <b>16 de mayo a las 06:00 UTC durante aproximadamente 8 horas</b>
+              para mejorar las características de juego y la seguridad. Gracias
+              por tu paciencia. ¡Estamos ansiosos por proporcionarte una
+              experiencia mejorada en el Casino X7!
             </p>
           </div>
           <div class="x7-subcontent">
             <p>
-              Si vous avez des questions ou avez besoin d'aide pendant que vous
-              reprenez le jeu, contactez-nous à <b>support@x7casino.com</b>.
+              Si tienes alguna pregunta o necesitas ayuda mientras vuelves a
+              jugar, contáctanos en <b>support@x7casino.com</b>.
             </p>
           </div>
         </div>

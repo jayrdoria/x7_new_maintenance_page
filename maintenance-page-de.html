@@ -3,7 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Maintenance Page IT</title>
+    <title>X7-Wartung</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://d7xz328ytuxde.cloudfront.net/x7c/settings/Favicon%2032x32_e7605588ee.webp"
+    />
     <style>
       .x7-maintenance-page * {
         margin: 0;
@@ -24,6 +30,29 @@
         top: 0;
         left: 0;
         z-index: -1; /* Optional: Ensure it stays in the background */
+      }
+
+      .language-buttons {
+        position: absolute;
+        top: 20px; /* Adjust this value based on your header's height */
+        right: 20px;
+        display: flex;
+        gap: 10px;
+      }
+
+      .language-buttons a {
+        display: inline-block;
+        transition: transform 0.3s ease;
+      }
+
+      .language-buttons a:hover {
+        transform: scale(1.1);
+      }
+
+      .language-buttons img {
+        width: 30px; /* You can adjust the size as needed */
+        height: 30px;
+        border-radius: 50%;
       }
 
       .x7-maintenance-main {
@@ -164,18 +193,7 @@
 
       @media (max-width: 460px) {
         .x7-maintenance-main .x7-content {
-          font-size: 0.75rem;
-          padding-top: 0.5rem;
-        }
-        .x7-maintenance-main .x7-subcontent {
-          padding-top: 0.5rem;
-          font-size: 1rem;
-        }
-      }
-
-      @media (max-width: 430px) {
-        .x7-maintenance-main .x7-content {
-          font-size: 0.75rem;
+          font-size: 0.7rem;
           padding-top: 0.5rem;
         }
         .x7-maintenance-main .x7-subcontent {
@@ -184,7 +202,11 @@
         }
       }
 
-      @media (max-width: 414px) {
+      @media (max-width: 430px) {
+        .x7-maintenance-main .x7-content {
+          font-size: 0.6rem;
+          padding-top: 0.5rem;
+        }
         .x7-maintenance-main .x7-subcontent {
           padding-top: 0.5rem;
           font-size: 0.85rem;
@@ -196,33 +218,22 @@
           padding-top: 0.5rem;
           font-size: 0.8rem;
         }
-        .x7-maintenance-main .x7-content {
-          font-size: 0.7rem;
-          padding-top: 0.5rem;
-        }
-        .x7-maintenance-main .x7-subcontent {
-          padding-top: 0.5rem;
-          font-size: 0.8rem;
-        }
       }
 
       @media (max-width: 375px) {
         .x7-maintenance-main .x7-content {
-          font-size: 0.65rem;
+          font-size: 0.6rem;
           padding-top: 0.5rem;
         }
         .x7-maintenance-main .x7-subcontent {
           padding-top: 0.5rem;
-          font-size: 0.8rem;
+          font-size: 0.75rem;
         }
       }
 
       @media (max-width: 360px) {
         .x7-maintenance-main .x7-logo {
           padding-top: 7vh;
-        }
-        .x7-maintenance-main .x7-subcontent {
-          font-size: 0.78rem;
         }
       }
 
@@ -331,6 +342,33 @@
   </head>
   <body>
     <div class="x7-maintenance-background">
+      <div class="language-buttons">
+        <a href="maintenance-page-en.html"
+          ><img
+            src="https://x1casino.com/wp-content/plugins/gtranslate/flags/svg/en.svg"
+            alt="English"
+        /></a>
+        <a href="maintenance-page-de.html"
+          ><img
+            src="https://x1casino.com/wp-content/plugins/gtranslate/flags/svg/de.svg"
+            alt="German"
+        /></a>
+        <a href="maintenance-page-fr.html"
+          ><img
+            src="https://x1casino.com/wp-content/plugins/gtranslate/flags/svg/fr.svg"
+            alt="French"
+        /></a>
+        <a href="maintenance-page-es.html"
+          ><img
+            src="https://x1casino.com/wp-content/plugins/gtranslate/flags/svg/es.svg"
+            alt="Spanish"
+        /></a>
+        <a href="maintenance-page-it.html"
+          ><img
+            src="https://kgc-igpcms-production.s3.eu-central-1.amazonaws.com/x7c/pages/italy_14e992cc12.svg"
+            alt="Italy"
+        /></a>
+      </div>
       <div class="x7-maintenance-main">
         <div class="x7-maintenance-left"></div>
         <div class="x7-maintenance-right">
@@ -338,21 +376,21 @@
             <img src="./assets/logo.png" alt="X7 Logo" />
           </div>
           <div class="x7-content">
-            <h1>Torneremo subito!</h1>
+            <h1>Wir sind gleich zurück!</h1>
           </div>
           <div class="x7-subcontent">
             <p>
-              Al momento stiamo effettuando lavori di manutenzione che iniziano
-              il <b>16 maggio alle 06:00 UTC per circa 8 ore</b> per migliorare
-              le funzionalità di gioco e la sicurezza. Grazie per la tua
-              pazienza. Non vediamo l'ora di offrirti un'esperienza migliorata
-              presso il Casinò X7!
+              Wir führen derzeit Wartungsarbeiten durch, die am
+              <b>16. Mai um 06:00 Uhr UTC beginnt und etwa 8 Stunden</b> dauert,
+              um die Spielefunktionen und die Sicherheit zu verbessern. Vielen
+              Dank für deine Geduld. Wir freuen uns darauf, dir bald ein
+              verbessertes Spielerlebnis im X7 Casino bieten zu können!
             </p>
           </div>
           <div class="x7-subcontent">
             <p>
-              Se hai domande o hai bisogno di assistenza mentre torni a giocare,
-              contattaci all'indirizzo <b>support@x7casino.com</b>.
+              Wenn du Fragen hast oder Unterstützung benötigst, während du
+              wieder spielst, kontaktiere uns unter <b>support@x7casino.com</b>.
             </p>
           </div>
         </div>

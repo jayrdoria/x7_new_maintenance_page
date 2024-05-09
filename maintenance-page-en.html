@@ -3,7 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Maintenance Page EN</title>
+    <title>X7 Maintenance</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://d7xz328ytuxde.cloudfront.net/x7c/settings/Favicon%2032x32_e7605588ee.webp"
+    />
     <style>
       .x7-maintenance-page * {
         margin: 0;
@@ -24,6 +30,29 @@
         top: 0;
         left: 0;
         z-index: -1; /* Optional: Ensure it stays in the background */
+      }
+
+      .language-buttons {
+        position: absolute;
+        top: 20px; /* Adjust this value based on your header's height */
+        right: 20px;
+        display: flex;
+        gap: 10px;
+      }
+
+      .language-buttons a {
+        display: inline-block;
+        transition: transform 0.3s ease;
+      }
+
+      .language-buttons a:hover {
+        transform: scale(1.1);
+      }
+
+      .language-buttons img {
+        width: 30px; /* You can adjust the size as needed */
+        height: 30px;
+        border-radius: 50%;
       }
 
       .x7-maintenance-main {
@@ -292,6 +321,33 @@
   </head>
   <body>
     <div class="x7-maintenance-background">
+      <div class="language-buttons">
+        <a href="maintenance-page-en.html"
+          ><img
+            src="https://x1casino.com/wp-content/plugins/gtranslate/flags/svg/en.svg"
+            alt="English"
+        /></a>
+        <a href="maintenance-page-de.html"
+          ><img
+            src="https://x1casino.com/wp-content/plugins/gtranslate/flags/svg/de.svg"
+            alt="German"
+        /></a>
+        <a href="maintenance-page-fr.html"
+          ><img
+            src="https://x1casino.com/wp-content/plugins/gtranslate/flags/svg/fr.svg"
+            alt="French"
+        /></a>
+        <a href="maintenance-page-es.html"
+          ><img
+            src="https://x1casino.com/wp-content/plugins/gtranslate/flags/svg/es.svg"
+            alt="Spanish"
+        /></a>
+        <a href="maintenance-page-it.html"
+          ><img
+            src="https://kgc-igpcms-production.s3.eu-central-1.amazonaws.com/x7c/pages/italy_14e992cc12.svg"
+            alt="Italy"
+        /></a>
+      </div>
       <div class="x7-maintenance-main">
         <div class="x7-maintenance-left"></div>
         <div class="x7-maintenance-right">

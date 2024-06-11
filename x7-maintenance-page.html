@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en" class="x7-maintenance-page">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>X7 Maintenance</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://d7xz328ytuxde.cloudfront.net/x7c/settings/Favicon%2032x32_e7605588ee.webp"
+    />
+    <style>
+      .x7-maintenance-page * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+      .x7-maintenance-background {
+        background-image: url(https://kgc-igpcms-production.s3.eu-central-1.amazonaws.com/x7c/pages/X7-BEFORE-MAINTENNACE-WEB-REV_6c83075ee0.webp);
+        background-size: cover; /* Cover the entire area of the element */
+        background-position: center; /* Center the image in the element */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        width: 100%; /* Stretch to the full width of the viewport */
+        min-height: 100vh; /* Minimum height to cover the viewport height */
+        position: fixed; /* Optional: Fix the position relative to the viewport */
+        top: 0;
+        left: 0;
+        z-index: -1; /* Optional: Ensure it stays in the background */
+      }
+
+      .language-buttons {
+        position: absolute;
+        top: 20px; /* Adjust this value based on your header's height */
+        right: 20px;
+        display: flex;
+        gap: 10px;
+      }
+
+      .language-buttons a {
+        display: inline-block;
+        transition: transform 0.3s ease;
+      }
+
+      .language-buttons a:hover {
+        transform: scale(1.1);
+      }
+
+      .language-buttons img {
+        width: 30px; /* You can adjust the size as needed */
+        height: 30px;
+        border-radius: 50%;
+      }
+
+      .x7-maintenance-main {
+        display: flex; /* Make this a flex container */
+        align-items: center;
+        justify-content: center; /* Align content to the left */
+        flex-direction: row;
+      }
+
+      .x7-maintenance-left {
+        display: flex; /* Make this a flex container */
+        align-items: center;
+        justify-content: center; /* Align content to the left */
+        flex-direction: column;
+        width: 50%;
+      }
+
+      .x7-maintenance-right {
+        display: flex; /* Make this a flex container */
+        align-items: center;
+        justify-content: center; /* Align content to the left */
+        flex-direction: column;
+        width: 55%;
+      }
+
+      .x7-maintenance-main .x7-logo {
+        display: flex; /* Make this a flex container */
+        justify-content: center; /* Center content horizontally */
+        align-items: center; /* Center content vertically */
+        padding-top: 15vh;
+      }
+
+      .x7-maintenance-main .x7-logo img {
+        height: 40%;
+        width: 40%;
+        object-fit: contain; /* This will ensure the image fits within the div without stretching */
+      }
+
+      .x7-maintenance-main .x7-content {
+        text-align: center;
+        font-family: "Open Sans", sans-serif;
+        font-size: 1.25rem;
+        color: #ffffff;
+        padding-top: 50px;
+        line-height: 1.2;
+      }
+
+      .x7-maintenance-main .x7-subcontent {
+        text-align: center;
+        font-size: 1.5rem;
+        font-family: "Open Sans", sans-serif;
+        color: #ffffff;
+        padding-top: 1rem;
+        line-height: 1.2;
+        width: 70%;
+      }
+      .x7-fullcontent {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+      }
+
+      @media (max-width: 1440px) {
+        .x7-maintenance-main .x7-logo img {
+          height: 50%;
+          width: 50%;
+          object-fit: contain; /* This will ensure the image fits within the div without stretching */
+        }
+        .x7-maintenance-right {
+          width: 50%;
+        }
+        .x7-maintenance-main .x7-content {
+          font-size: 1rem;
+          padding-top: 20px;
+        }
+
+        .x7-maintenance-main .x7-subcontent {
+          font-size: 1.3rem;
+        }
+      }
+
+      @media (max-width: 991px) {
+        .x7-maintenance-main .x7-logo img {
+          height: 70%;
+          width: 70%;
+          object-fit: contain; /* This will ensure the image fits within the div without stretching */
+        }
+        .x7-maintenance-background {
+          background-position: 22% 0%;
+        }
+        .x7-maintenance-main .x7-content {
+          font-size: 0.8rem;
+        }
+
+        .x7-maintenance-main .x7-subcontent {
+          font-size: 1rem;
+          width: 80%;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .x7-maintenance-main .x7-logo img {
+          height: 80%;
+          width: 80%;
+          object-fit: contain; /* This will ensure the image fits within the div without stretching */
+        }
+        .x7-maintenance-main .x7-subcontent {
+          padding: 1rem 10px 0 10px;
+        }
+        .x7-maintenance-background {
+          background-position: 25% 0%;
+        }
+        .x7-maintenance-main .x7-logo {
+          padding-top: 8vh;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .x7-maintenance-background {
+          background-image: url(https://kgc-igpcms-production.s3.eu-central-1.amazonaws.com/x7c/pages/X7-BEFORE-MAINTENNACE-MOBILE-REV_32d3ce8353.webp);
+        }
+        .x7-maintenance-main {
+          flex-direction: column;
+        }
+        .x7-maintenance-main .x7-logo {
+          padding-top: 8vh;
+        }
+        .x7-maintenance-main .x7-logo img {
+          height: 120%;
+          width: 120%;
+          object-fit: contain; /* This will ensure the image fits within the div without stretching */
+        }
+        .x7-maintenance-main .x7-content {
+          font-size: 0.8rem;
+          padding-top: 1rem;
+          width: 150%;
+        }
+        .x7-maintenance-main .x7-subcontent {
+          padding: 1rem 10px 0 10px;
+          width: 150%;
+        }
+      }
+
+      @media (max-width: 460px) {
+        .x7-maintenance-main .x7-content {
+          font-size: 0.6rem;
+          padding-top: 0.5rem;
+        }
+        .x7-maintenance-main .x7-subcontent {
+          padding-top: 0.5rem;
+          font-size: 0.9rem;
+        }
+      }
+
+      @media (max-width: 360px) {
+        .x7-maintenance-main .x7-logo {
+          padding-top: 7vh;
+        }
+        .x7-maintenance-main .x7-content {
+          font-size: 0.65rem;
+          padding-top: 0.5rem;
+        }
+        .x7-maintenance-main .x7-subcontent {
+          padding-top: 0.5rem;
+          font-size: 0.85rem;
+        }
+      }
+
+      /* Ipad Mini */
+      @media (width: 768px) and (height: 1024px) {
+        .x7-maintenance-main .x7-logo {
+          padding-top: 7vh;
+        }
+        .x7-maintenance-main .x7-content {
+          font-size: 1rem;
+          padding-top: 1rem;
+        }
+        .x7-maintenance-main .x7-subcontent {
+          padding-top: 1rem;
+          font-size: 1.1rem;
+        }
+      }
+
+      /* Ipad Air */
+      @media (width: 820px) and (height: 1180px) {
+        .x7-maintenance-background {
+          background-position: 22% 0%;
+        }
+        .x7-maintenance-main .x7-logo {
+          padding-top: 13vh;
+        }
+        .x7-maintenance-main .x7-content {
+          font-size: 1rem;
+          padding-top: 1rem;
+        }
+        .x7-maintenance-main .x7-subcontent {
+          padding-top: 1rem;
+          font-size: 1.1rem;
+        }
+      }
+
+      /* Ipad Pro */
+      @media (width: 1024px) and (height: 1366px) {
+        .x7-maintenance-main .x7-logo img {
+          height: 80%;
+          width: 80%;
+        }
+
+        .x7-maintenance-background {
+          background-position: 22% 0%;
+        }
+        .x7-maintenance-main .x7-logo {
+          padding-top: 11vh;
+        }
+        .x7-maintenance-main .x7-content {
+          font-size: 1.2rem;
+          padding-top: 1rem;
+        }
+        .x7-maintenance-main .x7-subcontent {
+          padding-top: 1rem;
+          font-size: 1.4rem;
+        }
+      }
+
+      /* Surface Pro */
+      @media (width: 912px) and (height: 1368px) {
+        .x7-maintenance-main .x7-logo img {
+          height: 80%;
+          width: 80%;
+        }
+
+        .x7-maintenance-background {
+          background-position: 22% 0%;
+        }
+        .x7-maintenance-main .x7-logo {
+          padding-top: 8vh;
+        }
+        .x7-maintenance-main .x7-content {
+          font-size: 1.1rem;
+          padding-top: 1rem;
+        }
+        .x7-maintenance-main .x7-subcontent {
+          padding-top: 1rem;
+          font-size: 1.4rem;
+        }
+      }
+
+      /* Asus Zenbook */
+      @media (width: 853px) and (height: 1280px) {
+        .x7-maintenance-main .x7-logo img {
+          height: 80%;
+          width: 80%;
+        }
+
+        .x7-maintenance-background {
+          background-position: 22% 0%;
+        }
+        .x7-maintenance-main .x7-logo {
+          padding-top: 5vh;
+        }
+        .x7-maintenance-main .x7-content {
+          font-size: 1.1rem;
+          padding-top: 1rem;
+        }
+        .x7-maintenance-main .x7-subcontent {
+          padding-top: 1rem;
+          font-size: 1.4rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="x7-maintenance-background">
+      <div class="language-buttons">
+        <a href="#" onclick="showContent('en')"
+          ><img
+            src="https://x1casino.com/wp-content/plugins/gtranslate/flags/svg/en.svg"
+            alt="English"
+        /></a>
+        <a href="#" onclick="showContent('de')"
+          ><img
+            src="https://x1casino.com/wp-content/plugins/gtranslate/flags/svg/de.svg"
+            alt="German"
+        /></a>
+        <a href="#" onclick="showContent('fr')"
+          ><img
+            src="https://x1casino.com/wp-content/plugins/gtranslate/flags/svg/fr.svg"
+            alt="French"
+        /></a>
+        <a href="#" onclick="showContent('es')"
+          ><img
+            src="https://x1casino.com/wp-content/plugins/gtranslate/flags/svg/es.svg"
+            alt="Spanish"
+        /></a>
+        <a href="#" onclick="showContent('it')"
+          ><img
+            src="https://kgc-igpcms-production.s3.eu-central-1.amazonaws.com/x7c/pages/italy_14e992cc12.svg"
+            alt="Italian"
+        /></a>
+      </div>
+      <div class="x7-maintenance-main">
+        <div class="x7-maintenance-left"></div>
+        <div class="x7-maintenance-right">
+          <div class="x7-logo">
+            <img
+              src="https://kgc-igpcms-production.s3.eu-central-1.amazonaws.com/x7c/pages/logo_157a7c3f47.webp"
+              alt="X7 Logo"
+            />
+          </div>
+          <div id="content-en" class="x7-fullcontent">
+            <div class="x7-content">
+              <h1>We’ll be right back!</h1>
+            </div>
+            <div class="x7-subcontent">
+              <p>
+                We're currently undergoing maintenance starting from
+                <b>May 16th at 06:00 UTC</b> for approximately 8 hours to
+                enhance your gaming experience. Thank you for your patience. We
+                can't wait to provide you with an upgraded X7 Casino experience!
+              </p>
+            </div>
+            <div class="x7-subcontent">
+              <p>
+                If you have any questions or need assistance as you get back to
+                gaming, contact us at <b>support@x7casino.com</b>.
+              </p>
+            </div>
+          </div>
+          <div id="content-de" class="x7-fullcontent" style="display: none">
+            <div class="x7-content">
+              <h1>Wir sind gleich zurück!</h1>
+            </div>
+            <div class="x7-subcontent">
+              <p>
+                Wir führen derzeit Wartungsarbeiten durch, die am
+                <b>16. Mai um 06:00 Uhr UTC beginnt und etwa 8 Stunden</b>
+                dauert, um die Spielefunktionen und die Sicherheit zu
+                verbessern. Vielen Dank für deine Geduld. Wir freuen uns darauf,
+                dir bald ein verbessertes Spielerlebnis im X7 Casino bieten zu
+                können!
+              </p>
+            </div>
+            <div class="x7-subcontent">
+              <p>
+                Wenn du Fragen hast oder Unterstützung benötigst, während du
+                wieder spielst, kontaktiere uns unter
+                <b>support@x7casino.com</b>.
+              </p>
+            </div>
+          </div>
+          <div id="content-fr" class="x7-fullcontent" style="display: none">
+            <div class="x7-content">
+              <h1>Nous serons bientôt de retour!</h1>
+            </div>
+            <div class="x7-subcontent">
+              <p>
+                Nous sommes actuellement en maintenance à partir du
+                <b>16 mai à 06h00 UTC pendant environ 8 heures</b> pour
+                améliorer les fonctionnalités de jeu et la sécurité. Merci pour
+                votre patience. Nous sommes impatients de vous offrir une
+                expérience améliorée au X7 Casino !
+              </p>
+            </div>
+            <div class="x7-subcontent">
+              <p>
+                Si vous avez des questions ou avez besoin d'aide pendant que
+                vous reprenez le jeu, contactez-nous à
+                <b>support@x7casino.com</b>.
+              </p>
+            </div>
+          </div>
+          <div id="content-es" class="x7-fullcontent" style="display: none">
+            <div class="x7-content">
+              <h1>¡Estaremos de vuelta enseguida!</h1>
+            </div>
+            <div class="x7-subcontent">
+              <p>
+                Actualmente estamos en mantenimiento a partir del
+                <b
+                  >16 de mayo a las 06:00 UTC durante aproximadamente 8 horas</b
+                >
+                para mejorar las características de juego y la seguridad.
+                Gracias por tu paciencia. ¡Estamos ansiosos por proporcionarte
+                una experiencia mejorada en el Casino X7!
+              </p>
+            </div>
+            <div class="x7-subcontent">
+              <p>
+                Si tienes alguna pregunta o necesitas ayuda mientras vuelves a
+                jugar, contáctanos en <b>support@x7casino.com</b>.
+              </p>
+            </div>
+          </div>
+          <div id="content-it" class="x7-fullcontent" style="display: none">
+            <div class="x7-content">
+              <h1>Torneremo subito!</h1>
+            </div>
+            <div class="x7-subcontent">
+              <p>
+                Al momento stiamo effettuando lavori di manutenzione che
+                iniziano il <b>16 maggio alle 06:00 UTC per circa 8 ore</b> per
+                migliorare le funzionalità di gioco e la sicurezza. Grazie per
+                la tua pazienza. Non vediamo l'ora di offrirti un'esperienza
+                migliorata presso il Casinò X7!
+              </p>
+            </div>
+            <div class="x7-subcontent">
+              <p>
+                Se hai domande o hai bisogno di assistenza mentre torni a
+                giocare, contattaci all'indirizzo <b>support@x7casino.com</b>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function showContent(language) {
+        const contents = document.querySelectorAll(".x7-fullcontent");
+        contents.forEach((content) => (content.style.display = "none"));
+        document.getElementById(`content-${language}`).style.display = "flex";
+      }
+    </script>
+  </body>
+</html>
